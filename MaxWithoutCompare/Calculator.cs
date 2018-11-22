@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace MaxWithoutCompare
 {
@@ -6,7 +7,7 @@ namespace MaxWithoutCompare
     {
         public int Max(int first, int second)
         {
-            throw new NotImplementedException();
+            return Enumerable.Empty<int>().Append(first).Append(second).OrderByDescending(i => i).FirstOrDefault();
         }
     }
 }
